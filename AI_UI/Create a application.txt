@@ -1,0 +1,14 @@
+Create a application that contains the below requirement
+Employees can raise requests (system access, equipment, facilities, general services).
+
+Each request gets a unique ID, status, and resolution date.
+
+Managers can approve, reject, or fulfill requests.
+
+Users can track progress and see history.
+
+The system should allow exports (PDF/CSV) for summaries.
+
+It must be implemented as a web application (like your wireframe) with an SQLite database backend, covering the full SDLC deliverables (requirements, architecture, ER diagram, code, test scripts, traceability matrix, user manual, and an AI code quality checker).
+
+👉 In short: You want a lightweight, production‑ready app that manages workplace resource requests end‑to‑end, with approvals and tracking, connected to SQLite.
