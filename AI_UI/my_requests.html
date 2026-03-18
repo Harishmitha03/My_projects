@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Requests</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    /* Left panel styling */
+    nav {
+      width: 220px;
+      background: linear-gradient(180deg, #0a1f44, #0d3c61); /* dark blue gradient */
+      padding: 40px 25px;   /* extra spacing for neatness */
+      height: 100vh;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+      color: #fff;
+    }
+    nav h2 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #fff;
+      margin-bottom: 30px;
+      text-align: center;
+      border-bottom: 2px solid rgba(255,255,255,0.3);
+      padding-bottom: 12px;
+    }
+    nav a {
+      display: block;
+      margin: 20px 0;       /* more spacing between links */
+      text-decoration: none;
+      color: #e0e0e0;
+      font-weight: bold;
+      padding: 12px;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.2s, color 0.3s;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.15);
+      color: #ffffff;
+      transform: translateX(6px);
+    }
+    /* Main content area */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: #f9f9f9;
+      padding: 50px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #0a1f44;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    h2 {
+      text-align: center;
+      color: #0a1f44;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Left panel navigation -->
+  <nav>
+    <h2>Navigation</h2>
+    <a href="homepage.html">🏠 Homepage</a>
+    <a href="service_catalog.html">📑 Service Catalog</a>
+    <a href="my_requests.html">📂 My Requests</a>
+    <a href="my_approvals.html">✅ My Approvals</a>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+    <div style="width:100%;">
+      <h2>My Requests</h2>
+      <table>
+        <tr>
+          <th>Request ID</th>
+          <th>Type</th>
+          <th>Created Date</th>
+          <th>Status</th>
+          <th>Target Resolution</th>
+        </tr>
+        <!-- Example rows -->
+        <tr>
+          <td>REQ001</td>
+          <td>System Access</td>
+          <td>2026-03-18</td>
+          <td>Submitted</td>
+          <td>2026-03-25</td>
+        </tr>
+        <tr>
+          <td>REQ002</td>
+          <td>Equipment</td>
+          <td>2026-03-17</td>
+          <td>Under Review</td>
+          <td>2026-03-24</td>
+        </tr>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

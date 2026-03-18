@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Service Catalog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    /* Left panel styling */
+    nav {
+      width: 220px;
+      background: linear-gradient(180deg, #0a1f44, #0d3c61); /* dark blue gradient */
+      padding: 40px 25px;   /* extra spacing for neatness */
+      height: 100vh;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+      color: #fff;
+    }
+    nav h2 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #fff;
+      margin-bottom: 30px;
+      text-align: center;
+      border-bottom: 2px solid rgba(255,255,255,0.3);
+      padding-bottom: 12px;
+    }
+    nav a {
+      display: block;
+      margin: 20px 0;       /* more spacing between links */
+      text-decoration: none;
+      color: #e0e0e0;
+      font-weight: bold;
+      padding: 12px;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.2s, color 0.3s;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.15);
+      color: #ffffff;
+      transform: translateX(6px);
+    }
+    /* Main content area */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f9f9f9;
+    }
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+    form h2 {
+      text-align: center;
+      color: #0a1f44;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+    input, textarea, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      background: #0a1f44;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #0d3c61;
+    }
+    #message {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Left panel navigation -->
+  <nav>
+    <h2>Navigation</h2>
+    <a href="homepage.html">🏠 Homepage</a>
+    <a href="service_catalog.html">📑 Service Catalog</a>
+    <a href="my_requests.html">📂 My Requests</a>
+    <a href="my_approvals.html">✅ My Approvals</a>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+    <form id="requestForm">
+      <h2>Raise a Request</h2>
+
+      <label>Request Type:</label>
+      <select required>
+        <option value="">-- Select --</option>
+        <option>System Access</option>
+        <option>Equipment</option>
+        <option>Facility</option>
+        <option>General Service</option>
+      </select>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Short Description:</label>
+      <input type="text" name="shortdesc" required>
+
+      <label>Detailed Justification:</label>
+      <textarea name="details" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+      <div id="message">✅ Request Submitted Successfully!</div>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("requestForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent page reload
+      document.getElementById("message").style.display = "block";
+    });
+  </script>
+</body>
+</html>
